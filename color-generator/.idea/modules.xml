@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/data-service.iml" filepath="$PROJECT_DIR$/data-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/color-generator.iml" filepath="$PROJECT_DIR$/color-generator.iml" />
     </modules>
   </component>
 </project>

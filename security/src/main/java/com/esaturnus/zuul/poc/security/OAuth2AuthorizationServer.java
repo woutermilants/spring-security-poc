@@ -37,11 +37,11 @@ public class OAuth2AuthorizationServer extends AuthorizationServerConfigurerAdap
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         log.info("configure2");
-        clients.inMemory().withClient("data-service")
+        clients.inMemory().withClient("color-generator")
                 .authorizedGrantTypes("authorization_code")
-                .secret(passwordEncoder.encode("data-service"))
+                .secret(passwordEncoder.encode("color-generator"))
                 .scopes("user_info")
-                .redirectUris("http://localhost:7001/login/oauth2/code/data-service")
+                .redirectUris("http://localhost:7001/login/oauth2/code/color-generator")
                 .autoApprove(false);
     }
 }

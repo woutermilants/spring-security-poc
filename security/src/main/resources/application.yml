@@ -14,8 +14,8 @@ user:
     clientSecret: fDw7Mpkk5czHNuSRtmhGmAGL42CaxQB9
     redirectUris: http://localhost:7002/login/redirect
     user:
-      username: admin2
-      password: nucleus
+      username: admin
+      password: secret
 
 logging:
   level:
