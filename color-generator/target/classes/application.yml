@@ -1,0 +1,35 @@
+server:
+  port: 7001
+  session:
+
+  servlet:
+    session:
+      cookie:
+        name: UISESSION
+spring:
+  thymeleaf:
+    cache: false
+  security:
+    oauth2:
+      client:
+        registration:
+          data-service:
+            client-id: data-service
+            client-secret: data-service
+            client-name: data service
+            scope: user_info
+            redirect-uri: http://localhost:7001/login/oauth2/code/data-service
+            client-authentication-method: basic
+            authorization-grant-type: authorization_code
+            provider: zuul-poc-security-client
+        provider:
+          zuul-poc-security-client:
+            authorization-uri: http://localhost:7002/auth/oauth/authorize
+            token-uri: http://localhost:7002/auth/oauth/token
+            user-info-uri: http://localhost:7002/auth/userinfo
+            user-name-attribute: userName
+
+logging:
+  level:
+    org:
+      springframework: DEBUG
